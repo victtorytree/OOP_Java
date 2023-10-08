@@ -3,13 +3,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class StudentGroup implements Iterable<Student> {
-    protected String groupName;
+    private String groupName;
+    private ArrayList<Student> students;
 
     public StudentGroup(String name) {
         this.groupName = name;
+        this.students = new ArrayList<Student>();
     }
-    protected ArrayList<Student> students = new ArrayList<Student>();
-    
+  
     public void addToGroup(Student student) {
         students.add(student);
     }
